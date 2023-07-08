@@ -9,7 +9,7 @@ body {
 }
 
 .score {
-  color: #fff;
+  color: #51ff00;
   padding: 10px;
   position: fixed;
   font-size: 20px;
@@ -35,7 +35,7 @@ body {
   position: absolute;
   right: 20px;
   bottom: 40px;
-  color: orangered;
+  color: rgb(255, 0, 0);
   font-size: 30px;
   font-weight: bold;
   border: 2px solid #fff;

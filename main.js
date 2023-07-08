@@ -12,7 +12,7 @@ let $ = e => document.querySelector(e)
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.score = 0
+        this.score = 0;
       }
 
       draw() {
@@ -67,7 +67,7 @@ let $ = e => document.querySelector(e)
       }
     }
 
-    let player = new Player(can.width / 2, can.height / 2, 40, 'white');
+    let player = new Player(can.width / 2, can.height / 2, 40, 'red');
     player.draw()
 
 
@@ -161,7 +161,7 @@ let $ = e => document.querySelector(e)
         y: Math.sin(angle) * 8
       }
 
-      projectiles.push(new Projectile(w / 2, h / 2, 5, 'white', velocity))
+      projectiles.push(new Projectile(w / 2, h / 2, 5, 'blue', velocity))
 
     });
 
@@ -175,7 +175,7 @@ let $ = e => document.querySelector(e)
       pause ? cancelAnimationFrame(loop) : requestAnimationFrame(animate);
     });
 
-    let destroy = 3;
+    let destroy = 50;
     $('.destroy').addEventListener('click', () => {
       destroy--;
       if (destroy >= 0) {
@@ -183,7 +183,7 @@ let $ = e => document.querySelector(e)
         for (i = 0; i < 6.28; i += 0.1) {
           let velocity = {
             x: Math.cos(i) * 5,
-            y: Math.sin(i) * 5
+            y: Math.sin(i) * 5,
           }
           projectiles.push(new Projectile(w / 2, h / 2, 5, 'orangered', velocity))
         }
